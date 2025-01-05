@@ -1,0 +1,953 @@
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        html {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        caption,
+        th,
+        td {
+            text-align: left;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+
+        q,
+        blockquote {
+            quotes: none;
+        }
+
+        q:before,
+        q:after,
+        blockquote:before,
+        blockquote:after {
+            content: "";
+            content: none;
+        }
+
+        a img {
+            border: none;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Fjalla One', sans-serif;
+            font-weight: normal;
+            line-height: normal;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        h4 {
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .isotope-item {
+            z-index: 2;
+        }
+
+        .isotope-hidden.isotope-item {
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .isotope {
+            -webkit-transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+            -webkit-transition-property: height, width;
+            -moz-transition-property: height, width;
+            -o-transition-property: height, width;
+            transition-property: height, width;
+        }
+
+        .isotope .isotope-item {
+            -webkit-transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property: -moz-transform, opacity;
+            -o-transition-property: -o-transform, opacity;
+            transition-property: transform, opacity;
+        }
+
+        .isotope.no-transition,
+        .isotope.no-transition .isotope-item,
+        .isotope .isotope-item.no-transition {
+            -webkit-transition-duration: 0s;
+            -moz-transition-duration: 0s;
+            -o-transition-duration: 0s;
+            transition-duration: 0s;
+        }
+
+        @font-face {
+            font-family: 'fontello';
+            src: url("http://www.yourbusybee.com/fonts/fontello.eot");
+            src: url("http://www.yourbusybee.com/fonts/fontello.eot#iefix") format("embedded-opentype"), url("http://www.yourbusybee.com/fonts/fontello.woff") format("woff"), url("http://www.yourbusybee.com/fonts/fontello.ttf") format("truetype"), url("http://www.yourbusybee.com/fonts/fontello.svg#mail") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        [class^="icon-"]:before,
+        [class*=" icon-"]:before {
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: .2em;
+            text-align: center;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1em;
+            margin-left: .2em;
+            text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+            */
+        }
+
+        
+
+        .hexagon {
+            width: 204px;
+            height: 236px;
+            overflow: hidden;
+            visibility: hidden;
+            float: left;
+            display: block;
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+
+        .hexagon div.hexagon-in1 {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+        }
+
+        .hexagon div.hexagon-in2 {
+            color: #fff;
+            overflow: hidden;
+            visibility: visible;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+        }
+
+        .hexagon .inner {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            visibility: hidden;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .hexagon a {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            visibility: visible;
+            display: block;
+            padding-top: 84px;
+            text-decoration: none;
+            -webkit-transition: padding 0.2s ease;
+            -moz-transition: padding 0.2s ease;
+            -o-transition: padding 0.2s ease;
+            transition: padding 0.2s ease;
+        }
+
+        .hexagon a i {
+            font-size: 70px;
+            display: block;
+        }
+
+
+        body {
+            background: radial-gradient(circle farthest-side at 0% 50%, #FFCC00 23.5%, rgba(255, 204, 0, 0) 0)21px 30px, radial-gradient(circle farthest-side at 0% 50%, #EABE06 24%, rgba(255, 204, 0, 0) 0)19px 30px, linear-gradient(#FFCC00 14%, rgba(255, 204, 0, 0) 0, rgba(255, 204, 0, 0) 85%, #FFCC00 0)0 0, linear-gradient(150deg, #FFCC00 24%, #EABE06 0, #EABE06 26%, rgba(255, 204, 0, 0) 0, rgba(255, 204, 0, 0) 74%, #EABE06 0, #EABE06 76%, #FFCC00 0)0 0, linear-gradient(30deg, #FFCC00 24%, #EABE06 0, #EABE06 26%, rgba(255, 204, 0, 0) 0, rgba(255, 204, 0, 0) 74%, #EABE06 0, #EABE06 76%, #FFCC00 0)0 0, linear-gradient(90deg, #EABE06 2%, #FFCC00 0, #FFCC00 98%, #EABE06 0%)0 0 #FFCC00;
+            background-size: auto, auto, auto, auto, auto, auto;
+            background-size: 40px 60px;
+            color: #c7c7c7;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        #page-wrapper {
+            width: 822px;
+            margin: 0 auto;
+        }
+
+        #page-wrapper #header {
+            height: 408px;
+            position: relative;
+            padding: 100px 0 0 0;
+            *zoom: 1;
+        }
+
+        #page-wrapper #header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #page-wrapper #header .header-menu {
+            position: absolute;
+        }
+
+        #page-wrapper #header .header-menu a:hover,
+        #page-wrapper #header .header-menu a.active {
+            padding-top: 60px;
+        }
+
+        #page-wrapper #header .header-menu a:hover span,
+        #page-wrapper #header .header-menu a.active span {
+            margin: 15px;
+        }
+
+        #page-wrapper #header .header-menu span {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 35px;
+            display: block;
+            margin-top: 75px;
+            -webkit-transition: margin 0.2s ease;
+            -moz-transition: margin 0.2s ease;
+            -o-transition: margin 0.2s ease;
+            transition: margin 0.2s ease;
+        }
+
+        #page-wrapper #header .header-menu .userpic a:hover {
+            padding-top: 0;
+        }
+
+        #page-wrapper #main {
+            background: #333333;
+            margin-top: -224px;
+            padding: 37px 0 46px;
+            min-height: 408px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            *zoom: 1;
+        }
+
+        #page-wrapper #main:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #page-wrapper #main .page-title {
+            text-align: center;
+            padding-top: 6px;
+            z-index: 10;
+        }
+
+        #page-wrapper #main .page-title h1 {
+            display: inline-block;
+            position: relative;
+        }
+
+        #page-wrapper #main .block-title {
+            padding-bottom: 30px;
+        }
+
+        #page-wrapper #main .content-wrapper {
+            *zoom: 1;
+        }
+
+        #page-wrapper #main .content-wrapper:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #page-wrapper #main .content-wrapper p {
+            margin-bottom: 20px;
+        }
+
+        #page-wrapper #main .content-wrapper ul {
+            margin-bottom: 20px;
+        }
+
+        #page-wrapper #main .content-wrapper ul li {
+            background: url('http://www.yourbusybee.com/images/bg-li.png') no-repeat 0 9px;
+            padding-left: 18px;
+        }
+
+        #page-wrapper #footer {
+            margin-top: -220px;
+            *zoom: 1;
+        }
+
+        #page-wrapper #footer:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .portfolio,
+        .contact {
+            margin: 168px 0 0 -43px;
+        }
+
+        .portfolio .hexagon-in2,
+        .portfolio a,
+        .contact .hexagon-in2,
+        .contact a {
+            background: #ff9000;
+        }
+
+
+        .contact {
+            margin: 168px -43px 0 -28px;
+        }
+
+
+        .profile,
+        .resume {
+            margin: 66px 0 0 -28px;
+        }
+
+        .profile .hexagon-in2,
+        .profile a,
+        .resume .hexagon-in2,
+        .resume a {
+            background: #db5800;
+        }
+
+
+        .userpic {
+            margin: -36px 0 0 -28px;
+        }
+
+        .userpic a {
+            padding: 0 !important;
+        }
+
+        .userpic a img {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+            margin: 16px 0 0 -16px;
+        }
+
+
+        
+
+
+        .copyright {
+            float: left;
+            width: 204px;
+            height: 200px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 220px -14px 0;
+            padding: 38px 23px 0 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+
+        label {
+            color: #fff;
+            font-size: 16px;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            background: #292929;
+            border: 1px solid #615f55;
+            color: #c7c7c7;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 15px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+
+        .hexagon {
+            width: 204px;
+            height: 236px;
+            overflow: hidden;
+            visibility: hidden;
+            float: left;
+            display: block;
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+
+        .hexagon div.hexagon-in1 {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+        }
+
+        .hexagon div.hexagon-in2 {
+            color: #fff;
+            overflow: hidden;
+            visibility: visible;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+        }
+
+        .hexagon .inner {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            visibility: hidden;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .hexagon a {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            visibility: visible;
+            display: block;
+            padding-top: 84px;
+            text-decoration: none;
+            -webkit-transition: padding 0.2s ease;
+            -moz-transition: padding 0.2s ease;
+            -o-transition: padding 0.2s ease;
+            transition: padding 0.2s ease;
+        }
+
+        .hexagon a i {
+            font-size: 70px;
+            display: block;
+        }
+
+        #contact-page .contact-address {
+            color: #fff;
+            font-size: 24px;
+            line-height: 32px;
+            padding: 34px 0 18px;
+            text-align: center;
+            z-index: 500;
+        }
+
+        #contact-page .cotent-wrapper {
+            padding: 0 32px 200px;
+        }
+
+        #contact-page .cotent-wrapper .map {
+            margin: 0 -32px 0 -32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact-page .cotent-wrapper .map #map_canvas {
+            height: 409px;
+            width: 100%;
+        }
+
+        #contact-page .cotent-wrapper .map .qr-code {
+            background: rgba(219, 88, 0, 0.78);
+            padding: 23px 20px 39px;
+            position: absolute;
+            right: -200px;
+            top: 57px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: right 0.7s ease;
+            -moz-transition: right 0.7s ease;
+            -o-transition: right 0.7s ease;
+            transition: right 0.7s ease;
+        }
+
+        #contact-page .cotent-wrapper .map .qr-code:before {
+            border-top: 148px solid transparent;
+            border-bottom: 148px solid transparent;
+            border-right: 86px solid rgba(219, 88, 0, 0.78);
+            left: -86px;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        #contact-page .cotent-wrapper .map .qr-code:after {
+            content: "\e80d";
+            font-family: 'fontello';
+            font-weight: normal;
+            display: inline-block;
+            position: absolute;
+            color: #fff;
+            font-size: 34px;
+            left: -49px;
+            top: 135px;
+        }
+
+        #contact-page .cotent-wrapper .map .qr-code.active {
+            right: 0;
+        }
+
+        #contact-page .cotent-wrapper .map .qr-code h3 {
+            font-size: 28px;
+            padding-bottom: 17px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details {
+            overflow: hidden;
+            padding-top: 40px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col {
+            float: left;
+            width: 494px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col .form-item {
+            float: left;
+            padding-bottom: 10px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col .form-item:first-child {
+            margin-right: 20px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col label {
+            display: block;
+            line-height: 30px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text],
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email] {
+            padding: 9px 10px 10px;
+            width: 237px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text]::-webkit-input-placeholder,
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email]::-webkit-input-placeholder {
+            / color: #615f55;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text]:-moz-placeholder,
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email]:-moz-placeholder {
+
+            color: #615f55;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text]::-moz-placeholder,
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email]::-moz-placeholder {
+
+            color: #615f55;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text]:-ms-input-placeholder,
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email]:-ms-input-placeholder {
+
+            color: #615f55;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=text]:focus,
+        #contact-page .cotent-wrapper .contact-details .left-col input[type=email]:focus {
+            outline: none;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col textarea {
+            padding: 10px;
+            resize: none;
+            height: 100px;
+            width: 100%;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col .form-submit {
+            background: url('http://www.yourbusybee.com/images/bg-submit.png') no-repeat 0 0;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+            padding: 6px 18px;
+            margin-top: 15px;
+            width: 123px;
+            height: 38px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col .form-submit:hover {
+            background: url('http://www.yourbusybee.com/images/bg-submit.png') no-repeat 0 -38px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .left-col .form-submit:active {
+            background: url('http://www.yourbusybee.com/images/bg-submit.png') no-repeat 0 -76px;
+            padding: 7px 17px 5px 19px;
+            color: #ffdcc2;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col {
+            float: right;
+            width: 224px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col h2 {
+            font-size: 24px;
+            padding-bottom: 18px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col p {
+            font-size: 18px;
+            padding-bottom: 12px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col p:before {
+            color: #fff;
+            font-size: 16px;
+            padding-right: 10px;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col p a {
+            color: #c7c7c7;
+            text-decoration: none;
+        }
+
+        #contact-page .cotent-wrapper .contact-details .right-col p a:hover {
+            text-decoration: underline;
+        }
+
+
+        #home-page #main h1 {
+            font-size: 48px;
+            margin: 0 auto;
+            padding-top: 26px;
+            position: relative;
+            text-align: center;
+            width: 580px;
+            z-index: 550;
+        }
+
+        #home-page #main p {
+            width: 530px;
+            font-size: 24px;
+            margin: 0 auto;
+            padding-top: 5px;
+            position: relative;
+            line-height: 31px;
+            text-align: center;
+        }
+
+        #home-page #main .job-title {
+            font-size: 24px;
+            text-align: center;
+            width: 150px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 550;
+            line-height: 27px;
+        }
+
+        #home-page #main .phone {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 30px;
+            color: #fff;
+            padding-top: 16px;
+            text-align: center;
+        }
+
+        #home-page #main .phone i {
+            background: #fff;
+            color: #333333;
+            display: block;
+            margin: 22px auto 0;
+            padding-top: 6px;
+            width: 49px;
+            height: 49px;
+            font-size: 35px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+
+        
+
+
+        
+    </style>
+</head>
+
+<body id="home-page">
+    <div id="page-wrapper">
+        <header id="header" role="banner">
+            <ul class="header-menu">
+                <li class="portfolio hexagon">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2">
+                            <div class="inner">
+                                <a href="a.html">
+                                    <i class="far fa-images"></i>
+                                    <span>Reload</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="profile hexagon">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2">
+                            <div class="inner">
+                                <a href="bfirst.html">
+                                    <i class="far fa-address-card"></i>
+                                    <span>My Biography</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="userpic hexagon">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2">
+                            <a href="index.html"><img src="http://www.yourbusybee.com/images/avatar.jpg" height="204"
+                                    width="236" alt=""></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="resume hexagon">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2">
+                            <div class="inner">
+                                <a href="d.html">
+                                    <i class="far fa-file"></i>
+                                    <span>My Ability</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="contact hexagon">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2">
+                            <div class="inner">
+                                <a href="c.html">
+                                    <i class="far fa-envelope-open"></i>
+                                    <span>My Achievement</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </header><!-- /#header -->
+
+        <div id="main">
+            <div class="job-title">coding &amp; coffee</div>
+            <h1>Seyed Mohammad Hosseini</h1>
+            <p>This page related to my information</p>
+            <div class="phone">
+                0912 406 ****<br />
+                <i class="fas fa-phone-volume"></i>
+            </div>
+        </div>
+
+        <footer id="footer" role="contentinfo">
+            
+                
+                <li class="copyright">Â©2024 <br /> All rights reserved</li>
+                
+                
+            </ul>
+        </footer><!-- /#footer -->
+    </div>
+</body>
+
+</html>
+
