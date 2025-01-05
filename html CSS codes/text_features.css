@@ -1,0 +1,22 @@
+.start{
+    color: chocolate;
+    font-size: 20px;
+    font-weight:bold;
+    font-family: Roboto;
+    text-align: center;
+    
+}
+.video-title{
+    font-size: 17px;
+    
+    width: 300px;
+    line-height: 22px;
+    margin-bottom: 0;
+    
+}
+.video-stats{
+    font-family: Arial;
+}
+.span-example{
+    color: blue;
+}

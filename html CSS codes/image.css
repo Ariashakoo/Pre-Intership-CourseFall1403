@@ -1,0 +1,6 @@
+.picture-example{
+    width: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-style: solid;
+}
